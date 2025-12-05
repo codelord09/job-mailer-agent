@@ -29,7 +29,7 @@ def send_email(receiver_name, company_name, job_link, receiver_email):
         .replace("{job_link}", job_link)
     )
 
-    subject = "Application for SDE1 Role | IIIT Allahabad"
+    subject = "Immediate Joiner | SDE(GenAI) | IIIT Allahabad | 2+ Years Exp"
     msg = MIMEMultipart()
     msg["From"] = your_email
     msg["To"] = receiver_email
