@@ -8,7 +8,9 @@ from docx import Document
 from email.mime.base import MIMEBase
 from email import encoders
 
-contacts = pd.read_excel("contacts.xlsx")  
+contacts = pd.read_excel("contacts.xlsx")
+# Clean up column names by removing leading/trailing whitespace and specific Excel-related artifacts.
+contacts.columns = contacts.columns.str.strip().str.replace("_x000d_", "")
 
 your_email = "neerajgupta0912@gmail.com"
 your_password = "fqkf ceqb ahbk loip"
@@ -29,7 +31,9 @@ def send_email(receiver_name, company_name, job_link, receiver_email):
         .replace("{job_link}", job_link)
     )
 
-    subject = "Immediate Joiner | SDE(GenAI) | IIIT Allahabad | 2+ Years Exp"
+    # subject = "Immediate Joiner | SDE(GenAI) | IIIT Allahabad | 2+ Years Exp"
+    subject = "Immediate Joiner | PineLabs x o9 | SDE(GenAI) | IIIT Allahabad | 2+ Years Exp"
+
     msg = MIMEMultipart()
     msg["From"] = your_email
     msg["To"] = receiver_email
