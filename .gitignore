@@ -1,2 +1,18 @@
-myenv 
-all_contacts/csv
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Mac
+.DS_Store
+
+# Office / Temporary
+~$*
+*.tmp
+
+# Project specific
+all_contacts.csv
+# Keeping existing ignores just in case, though checked content was inconsistent
+myenv/
